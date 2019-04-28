@@ -33,9 +33,9 @@ public class HttpManager
         return getResponseBody();
     }
 
-    public String getRegional()
+    public String getRegional(String date)
     {
-        HttpGet getRegional = new HttpGet(PropertiesReader.getRegionalUrl());
+        HttpGet getRegional = new HttpGet(PropertiesReader.getRegionalUrl(date));
         updateResponse(getRegional);
         return getResponseBody();
     }
