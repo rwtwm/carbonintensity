@@ -9,7 +9,7 @@ public class Utility
 {
     private Utility(){}
 
-    public String fileToString(String filename)
+    public static String fileToString(String filename)
     {
         String ifJson = "";
         File inputFile = new File(filename);
@@ -21,7 +21,6 @@ public class Utility
             while ((nextLine = bufferedReader.readLine()) != null)
             {
                 ifJson += nextLine.trim();
-
             }
 
             bufferedReader.close();

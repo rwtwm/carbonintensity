@@ -1,6 +1,7 @@
 package com.sparta.waj;
 
 import com.sparta.waj.datatransfer.deserialisers.IntensityFactorDeserialiser;
+import com.sparta.waj.utility.Utility;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,16 +15,14 @@ public class IntensityFactorTests
     @Before
     public void getJsonString()
     {
-        File inputFile = new File(STUB_LOC);
-        ifJson = inputFile.toString();
-        System.out.println(ifJson);
+        ifJson = Utility.fileToString(STUB_LOC);
     }
 
     @Test
     public void intensityLoad()
     {
-
         IntensityFactorDeserialiser deserialiser = new IntensityFactorDeserialiser(ifJson);
+        System.out.println(deserialiser.getIntensityFactorDTO().getDutchImports());
     }
 
 }

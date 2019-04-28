@@ -22,7 +22,6 @@ public class IntensityFactorDeserialiser
             e.printStackTrace();
         }
 
-
     }
 
     public IntensityFactorDTO getIntensityFactorDTO()
