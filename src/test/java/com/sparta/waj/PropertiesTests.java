@@ -18,11 +18,7 @@ public class PropertiesTests
         Assert.assertEquals(PropertiesReader.getIntensityUrl(), "api.carbonintensity.org.uk/intensity/");
     }
 
-    @Test
-    public void regionalTest()
-    {
-        Assert.assertEquals(PropertiesReader.getRegionalUrl(), "api.carbonintensity.org.uk/regional/intensity/");
-    }
+
 
 
 
