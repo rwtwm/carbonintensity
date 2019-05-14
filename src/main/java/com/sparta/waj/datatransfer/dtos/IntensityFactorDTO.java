@@ -39,6 +39,9 @@ public class IntensityFactorDTO
         return (int) data[0].get("Coal");
     }
 
+    @JsonGetter("French Imports")
+    public int getFrenchImports(){return (int) data[0].get("French Imports");}
+
     @JsonGetter("Dutch Imports")
     public int getDutchImports()
     {

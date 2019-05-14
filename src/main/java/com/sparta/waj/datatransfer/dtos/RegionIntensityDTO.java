@@ -31,5 +31,24 @@ public class RegionIntensityDTO
         return (int) getIntensity(period).get("forecast");
     }
 
+    public Map<String, Object>[] getGenerationMix(int period)
+    {
+        return (Map<String, Object>[]) getHalfHourlyData().get(period).get("generationmix");
+    }
+
+    public int findMixIndex(String mixType, int period)
+    {
+        int i = 0;
+        for (Map mixMap: getGenerationMix(period))
+        {
+            if (mixMap.get("fuel") == mixType){
+                return i;
+            }
+            i++;
+        }
+
+        return -1;
+    }
+
 
 }
